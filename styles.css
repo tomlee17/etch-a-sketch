@@ -1,0 +1,21 @@
+*{
+    margin:auto;
+    padding:0;
+    box-sizing: border-box;   
+}
+
+.container{
+    font-size:0; 
+    width:80%;
+}
+
+.grid{
+    border:1px;
+    display: inline-block;
+    border-style: solid;
+    margin:0 auto;
+}
+
+.grid-hover{
+background-color: green;
+}
