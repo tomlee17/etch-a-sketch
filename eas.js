@@ -13,11 +13,11 @@ function makeGrids(rowsCols) {
 makeGrids(16);
 
 
-function randomColor(el) {
+function randomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    return `rgb(${r},${g},${b})`;
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
 let grids = undefined;
@@ -26,6 +26,12 @@ function mouseSketch() {
     grids.forEach(grid => grid.addEventListener('mouseover', (e) => {
         //e.target.classList.add('grid-hover');
         e.target.style.backgroundColor = randomColor();
+        if (+e.target.style.opacity < 1) {
+            let opacity = +e.target.style.opacity;
+            opacity += 0.1;
+            e.target.style.opacity = opacity.toString();
+            console.log(e.target.style.opacity);
+        }
     }))
 }
 
